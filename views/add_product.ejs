@@ -1,0 +1,66 @@
+
+<%- include('_layouts/adminheader') -%>
+<link rel="stylesheet" href="../css/admin.css">
+
+<div class="App2">
+    <div class="A__Form">
+  <div class="FormCenter">
+
+  <% if(errors){ %>
+    <% errors.forEach(function(error){ %>
+      <div class="alert alert-danger">
+        <%= error.msg %>
+      </div>
+   <% }); %>
+  <% } %>
+  
+  <% if (locals.messages) { %>
+ <h1 style="color: brown;"> 
+    <b> <%= messages.danger %></b>
+  </h1>
+        <% } %>
+       
+        
+  <h2 class="page-title">Add a product</h2>
+  <br>
+      <form class="FormFields"action="/products/add-product"method="post" enctype="multipart/form-data">
+        <a href="/products" class="btn btn-primary">Back to all products</a>
+
+        <br>
+        <br>
+
+      </br>
+      <div class="FormField">
+          <label class="FormField__Label" for="">Title:</label>
+          <input type="text" class="FormField__Input"name="title" placeholder="Title" value="<% title%>" >
+        </div>
+        <div class="FormField">
+            <label class="FormField__Label" for="">Description</label>
+                <textarea id="ta" name="desc" color="black" class="FormField__Input"cols="60" rows="5"  placeholder="Description" ><%=desc%></textarea>
+            </div>
+
+        <div class="FormField">
+            <label class="FormField__Label" for="">Category</label>
+                <select  class="FormField__Input"name="category" >
+                    <% categories.forEach(function(cat){%>
+                    <option value="<%=cat.slug%>"><%=cat.title%></option>
+                    <%});%>
+                </select>
+            </div>
+            <div class="FormField">
+                <label class="FormField__Label" for="">Price</label>
+                <input type="text" class="FormField__Input"name="price" placeholder="Price" value="<% price%>" >
+              </div>
+              <div class="FormField">
+                <label class="FormField__Label" for="">Image</label>
+                <input type="file" name="image" id="img"  class="filepond"  />
+
+              </div>  
+        <div class="FormField">
+            <button class="FormField__Button mr-20" type="submit">Submit</button> 
+         <!--   <button class="FormField__Button mr-30" type="submit">As Vendor</button> -->
+        </div>
+      </form>
+    </div>
+    </div>
+</div>

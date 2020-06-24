@@ -1,0 +1,42 @@
+<%- include ('_layouts/adminheader') -%>
+<br>
+<br>
+<br>
+<br>
+
+<h2 class="page-title">Pages</h2>
+<a href="pages/add-page" class="btn btn-primary">Add a new page</a>
+<br><br>
+<% if(errors){ %>
+    <% errors.forEach(function(error){ %>
+      <div class="alert alert-danger">
+        <%= error.msg %>
+      </div>
+   <% }); %>
+  <% } %>
+<% if (locals.messages) { %>
+    <h1 style="color: brown;"> <b> <%= messages.danger %></b></h1>
+          <% } %>
+          <% if (locals.messages) { %>
+  
+            <h1 style="color:burlywood;"> <b>      <%= messages.success %> </b></h1>
+                <% } %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th><b>Pages</b></th>
+    </tr>
+    </thead> 
+        <tbody>
+            <%pages.forEach(function(page){%>
+                <tr>
+                    <td><%=page.title%></td>
+                   <% if (page.slug=="home"){%>
+<td></td>
+         <%          } else {%>
+                    <td><a  onclick = "if (! confirm('Are you sure?')) { return false; }" href="pages/delete-page/<%=page._id%>">Delete</a></td>
+<% }%>
+                </tr>
+<% }); %>
+            </tbody>
+            </table>

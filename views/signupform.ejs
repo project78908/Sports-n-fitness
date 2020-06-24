@@ -1,0 +1,67 @@
+
+<%- include ('_layouts/header1') -%>
+<link rel="stylesheet" href="../css/login.css">
+
+<div class="App1">
+        <div class="App__Form">
+         
+               
+        <div class="FormCenter"  >
+
+          <% if(errors){ %>
+            <% errors.forEach(function(error){ %>
+              <div class="alert alert-danger">
+                <%= error.msg %>
+              </div>
+           <% }); %>
+          <% } %>
+          
+          <% if (locals.messages) { %>
+          <p style="color: brown;font-size:x-large;"> 
+            <b> <%= messages.danger %></b>
+          </p>
+                <% } %>
+                <% if (locals.messages) { %>
+                  <p style="color: brown;"> 
+                    <b> <%= messages.success %></b>
+                  </p>
+                        <% } %>
+                
+            <form class="FormFields" method="post" action="/users/signupform">
+             
+                <div class="FormField">
+                <label class="FormField__Label" >Full Name</label>
+                <input type="text" id="name" class="FormField__Input" placeholder="Enter your full name" name="name" value="" required/>
+              </div>
+              <div class="FormField">
+                <label class="FormField__Label" >Password</label>
+                <input type="password" id="password" class="FormField__Input" placeholder="Enter your password" name="password" value="" required/>
+              </div>
+              <div class="FormField">
+                <label class="FormField__Label" >Confirm Password</label>
+                <input type="password" id="password2" class="FormField__Input" placeholder="Confirm Password" name="password2" value="" required/>
+              </div>
+              <div class="FormField">
+                <label class="FormField__Label" >Username</label>
+                <input type="text" id="username" class="FormField__Input" placeholder="Enter your username" name="username" value="" required/>
+              </div>
+              
+              <div class="FormField">
+                <label class="FormField__Label" for="" >E-Mail Address</label>
+                <input type="email" id="email" class="FormField__Input" placeholder="Enter your email" name="email"  required/>
+              </div>
+              <div class="FormField">
+                <label class="FormField__Label">Contact</label>
+                <input type="number" id="number" class="FormField__Input" placeholder="Enter your number" name="number" value="" required />
+              </div>
+
+              
+              <div class="FormField">
+                  <button class="FormField__Button mr-20" type="submit">Sign Up</button> <a href="signinform" class="FormField__Link">I'm already member</a>
+              </div>
+            </form>
+            </div>
+
+</div>          </div>
+
+

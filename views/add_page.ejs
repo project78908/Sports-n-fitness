@@ -1,0 +1,54 @@
+<%- include('_layouts/adminheader') -%>
+<link rel="stylesheet" href="../css/login.css">
+
+<div class="App2">
+    <div class="A__Form">
+  <div class="FormCenter">
+  <img src="login."alt=""/>
+
+  <% if(errors){ %>
+    <% errors.forEach(function(error){ %>
+      <div class="alert alert-danger">
+        <%= error.msg %>
+      </div>
+   <% }); %>
+  <% } %>
+  
+  <% if (locals.messages) { %>
+ <h1 style="color: brown;"> 
+    <b> <%= messages.danger %></b>
+  </h1>
+        <% } %>
+       
+        
+  <h2 class="page-title">Add a page</h2>
+  <br>
+      <form class="FormFields"action="/pages/add-page"method="post">
+        <a href="/pages" class="btn btn-primary">Back to all pages</a>
+
+        <br>
+        <br>
+
+      </br>
+      <div class="FormField">
+          <label class="FormField__Label" for="">Title:</label>
+          <input type="text" class="FormField__Input"name="title" placeholder="Title" >
+        </div>
+      
+        <div class="FormField">
+            <label class="FormField__Label" for="">Slug</label>
+                <input type="text" class="FormField__Input"name="slug" placeholder="Slug">
+            </div>
+        <div class="FormField">
+            <label class="FormField__Label" for="">Content</label>
+                <textarea id="ta" name="content" color="black" class="FormField__Input"cols="60" rows="5"  placeholder="Content" ></textarea>
+            </div>
+
+        <div class="FormField">
+            <button class="FormField__Button mr-20" type="submit">Submit</button> 
+         <!--   <button class="FormField__Button mr-30" type="submit">As Vendor</button> -->
+        </div>
+      </form>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,286 @@
+*{ margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family: 'Philosopher', sans-serif;
+} 
+.main{margin-top: 0px;
+
+}
+
+  
+.PageSwitcher {
+    display:flex;
+    justify-content: flex-end;
+    position: absolute;
+    left:95%;
+    margin-top: 0.05%;;
+    top:0.05%;
+  }
+  
+  .PageSwitcher__Item {
+    background-color:rgb(192, 191, 191);
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 100px;
+    border: none;
+    outline: none;
+    display: flex;
+    text-decoration: none;
+  }
+  
+  .PageSwitcher__Item--Active {
+    background-color: #5ED0C0;
+    color: white;
+
+  }
+  
+  .PageSwitcher__Item:first-child {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    font-size: 15px;
+
+
+  }
+  .PageSwitcher__Item:last-child {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 15px;
+
+  }
+  
+.mainnav{
+    float:right;
+    position:absolute;
+    margin-top:20px;
+top:1%;
+        left:41%;
+
+    color: #110800;
+
+    
+    }
+    .mainnav li{
+    display:inline-block;
+    list-style:none;
+    margin-left:51px;
+    overflow:hidden;
+    color: #110800;
+
+    }
+    .mainnav li a{
+        color: #110800;
+        text-decoration: none;
+        font-size:130%;
+        font-weight: bold;
+        color: green;
+        border: none;
+        outline: none;
+    
+    }
+    .mainnav li a:hover{
+        background-color:rgba(27, 26, 26, 0.088);
+
+    }
+    .mainnav-fixed{
+        top: 0;
+        z-index: 100;
+      position: fixed;
+        
+    }
+    .row{
+        max-width:1180px;
+        margin:0px;
+        
+    }
+    .logo{ 
+        height:1px;
+        width:8px;
+        float:left;
+        position: absolute;
+        top:0.08%;
+        left:1%;
+
+    }
+    .title1{
+        display:inline-block;
+    list-style:none;
+    margin-right:10px;
+        text-decoration: none;
+        font-size:220%;
+        font-weight:400;
+        position:absolute;
+        top:1.5%;
+        left:5%;
+    animation: sports 0.5s infinite;
+}
+@keyframes sports{
+    0%{color:olivedrab;};
+    25%{color:brown;};
+    50%{color:yellowgreen};
+    100%{color:rgb(0, 128, 58);};
+}
+    
+    .title2{
+        display:inline-block;
+    list-style:none;
+    margin-right:12px;
+    columns: #110800;
+        text-decoration: none;
+        font-size:300%;
+        font-weight:180px;
+        position:absolute;
+        top:7%;
+        left:5%;
+
+       
+    
+    }
+    
+.image{background-image:url('../images/Homepic1.jpg');
+    background-repeat: no-repeat;
+
+    background-size: contain;
+  width:100%;
+      position: absolute;
+    top:72px;
+    opacity: 0.8;
+height:495vh;
+
+}
+.background{
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-size: contain;
+  width:100%;
+      position: absolute;
+    top:72px;
+
+    
+
+}
+.maincontent{
+    position:absolute;
+    top:25%;
+    left:12%;
+    text-align: center;
+    color:#000;
+
+
+}
+.text{
+    margin-bottom: 10px;;
+
+}
+.text h2
+{     color:black;
+ font-size:30px;
+ font-weight: 700;
+    margin-top: 19%;
+    margin-left: 25%;
+    margin-bottom: 10px;
+    position: relative;
+    top:21%;
+}
+.text h3{color:#000;
+    margin-left: 15%;
+    font-size:20px;
+    font-style: italic;
+    font-weight: 700;
+    position: relative;
+    top:21%;
+
+
+}
+
+
+
+
+#one a:hover
+{
+    color: steelblue;
+}
+.row{
+    margin-top: 10px;
+}
+.carda {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    font-family: arial;
+    position: absolute;
+    left:125px;
+}
+.carda img{
+    vertical-align: middle;
+
+}
+.carda .content{
+        position: absolute;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+      
+}
+.carda1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 250px;
+    margin: auto;
+    margin-top: 100px;
+
+    text-align: center;
+    font-family: arial;
+    position: absolute;
+    left:550px;
+  }
+  .carda2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-top: 100px;
+
+    text-align: center;
+    font-family: arial;
+    position: absolute;
+    left:930px;
+width:250px;
+  }
+  .carda1 img{
+    vertical-align: middle;
+
+}
+.carda1 .content{
+        position: absolute;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+      
+}.carda2 img{
+    vertical-align: middle;
+
+}
+.carda2 .content{
+        position: absolute;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+      
+}
+
+
+@media only screen and (max-width:1099px){
+    .maincontent{
+        font-size:90%;
+    }
+}
+@media only screen and (max-width:998px){
+    .maincontent{
+        font-size:70%;
+    }
+}

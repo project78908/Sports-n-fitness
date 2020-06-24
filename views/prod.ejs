@@ -1,0 +1,217 @@
+<%- include ('_layouts/header1') -%>
+<link rel="stylesheet" href="../css/products.css">
+
+  <div class="products">
+     
+      <div class="menu-bar">
+      <ul>
+  
+      <li><a href="/cart/checkout"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+  My Cart (
+<% if (typeof (cart) !=="undefined"){%>
+<%=cart.length%>
+<%}else{%>
+0
+<%}%>
+
+  )</a></li>
+  
+      </ul>
+      </div>
+      
+  <div class="slider center" >
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../images/image13.jpg" class="d-block w-100 " alt="" height="500" />
+      </div>
+      <div class="carousel-item">
+        <img src="../images/image2.jpg" class="d-block w-100 " alt="" height="500"/>
+         </div>
+      <div class="carousel-item">
+        <img src="../images/image15.jpg" class="d-block w-100 " alt="" height="500"/>
+      </div>
+    </div>
+    
+    <ol class="carousel-indicators animate-top">
+      <li data-target="#slider" data-slide-to="0" class="active"></li>
+      <li data-target="#slider" data-slide-to="1"></li>
+      <li data-target="#slider" data-slide-to="2"></li>
+    </ol>
+  </div>
+ 
+  </div>
+  <div class="catebar"> Choose category </div>
+    <div class="row1">
+        
+       <ul class="list-group">
+         <!--
+<li class="list-group-item"><a href="product-view">All products</a></li>-->
+<% categories.forEach(function(c){%>
+  <li class="list-group-item"><a href="/product-view/<%=c.slug%>"><%=c.title%></a></li>
+<%});%>
+       </ul>
+       <div class="col-xs-12 col-md-1"></div>
+       <div class="col-xs-12 col-md-8">
+         </div>
+
+  </div>
+
+
+
+   <!--<div class="container" id="catebar1"><ul class="nav nav-tabs">
+      <li class="" onclick="openForm()" ><a data-toggle="tab" href="#home"><i class="fa fa-plus"></i>Add category</a></li> </ul>
+        <div class="tab-content">
+          <div id="home" class="tab-pane fade ">
+            <form action="/products"class="form"id="demo" method="POST">
+              <input type="text"  name="cname" placeholder="Category" class="input" autocomplete="">
+              <span>
+              <button class="button">Submit</button></span>
+              <button type="submit" class="cancel" onclick="closeForm()"><i class="fa fa-close"></i></button>
+            </form>           </div></div></div>
+           <div class="" id="catebar1">
+             <ul>
+               <li class="">
+                 <a href="#home">Search</a>
+                 </li>
+             </ul>
+           </div>    
+     --> 
+       
+  <!--<button class="accordion"><div class="">
+    <h2>Swimming</h2>
+  </div></button><div class="panel">
+  <div class="row">
+    <div class="column">
+  <div class="card">
+    <img src="../images/image8.jpg" alt=""/>
+    <h1>Swimming Kit</h1>
+    <p class="price">Rs.500</p>
+    <p><button>Add to Cart</button></p>
+    </div></div>
+    <div class="column">
+    <div class="card">
+    <img src="../images/image9.jpg" alt=""/>
+    <h1>Costumes for Women</h1>
+    <p class="price">Rs.2000</p>
+    <p><button>Add to Cart</button></p>
+    </div></div>
+    <div class="column">
+    <div class="card">
+    <img src="../images/image10.jpg" alt=""/>
+    <h1>Costumes for Men</h1>
+    <p class="price">Rs.1500</p>
+    <p><button>Add to Cart</button></p>
+    </div>
+    </div>
+  </div>
+</div>
+<button class="accordion"><div class="">
+  <h2>Cricket</h2>
+</div></button>
+  <div class="row">
+    <div class="column">
+  <div class="card">
+  <img src="../images/image7.jpg" alt=""/>
+  <h1>Cricket Kit</h1>
+  <p class="price">Rs.5500</p>
+  <p><button>Add to Cart</button></p></div>
+  </div>
+</div>
+</div>
+<button class="accordion"><div class="">
+  <h2>Football</h2>
+</div></button>
+<div class="panel">
+  <div class="row">
+    <div class="column">
+  <div class="card">
+    <img src="../images/image11.jpg" alt=""/>
+    <h1>Football Kit</h1>
+    <p class="price">Rs.2000</p>
+    <p><button>Add to Cart</button></p></div></div>
+    <div class="column">
+    <div class="card">
+    <img src="../images/image1.jpg" alt=""/>
+    <h1>Jersey</h1>
+    <p class="price">Rs.1500</p>
+    <p><button>Add to Cart</button></p></div></div>
+    <div class="column">
+      <div class="card">
+    
+    <img src="../images/image12.jpg" alt=""/>
+    <h1>Football</h1>
+    <p class="price">Rs.1500</p>
+    <p><button>Add to Cart</button></p>
+    </div></div></div></div>
+    <button class="accordion"><div class="">
+      <h2>Gym</h2>
+    </div></button>
+    <div class="panel">
+      <div class="row">
+        <div class="column">
+      <div class="card">
+        <img src="../images/image4.jpg" alt=""/>
+        <h1>Protein </h1>
+        <p class="price">Rs.500</p>
+        <p><button>Add to Cart</button></p></div> </div></div>   </div>
+        <button class="accordion"><div class="">
+          <h2>Yoga</h2>
+        </div></button>
+        <div class="panel">
+          <div class="row">
+            <div class="column">
+          <div class="card">
+            <img src="../images/image14.jpg" alt=""/>
+            <h1>Protein </h1>
+            <p class="price">Rs.500</p>
+            <p><button>Add to Cart</button></p></div> </div></div>   </div>-->
+    <br><br>    <br>    <br>    <br>    <br>    <br><br>    <br>    <br>    <br>    <br>  <br>  <br> <br> <br> <br> <br><br><br> <br> <br> <br>
+
+
+
+
+
+
+
+
+
+  
+    
+
+  <section class="web-features">
+  <div class="row">
+  <div class="col-md-3 feature-box">
+  <img src="../images/image16.jpg"/>
+  <div class="feature-text">
+  <p><b>100% original items</b> are available at company.</p>
+  
+  </div>
+  </div>
+  <div class="col-md-3 feature-box">
+  <img src="../images/image17.jpg"/>
+  <div class="feature-text">
+  <p><b>Get free delivery for every</b> order.</p>
+  
+  </div>
+  </div>
+  <div class="col-md-3 feature-box">
+  <img src="../images/image18.jpg"/>
+  <div class="feature-text">
+  <p><b>Return within 24 hrs </b> of receiving your order.</p>
+  
+  </div>
+  </div>
+  <div class="col-md-3 feature-box">
+  <img src="../images/image19.jpg"/>
+  <div class="feature-text">
+  <p><b>Pay Online </b> through payment option.</p>
+  
+  </div>
+  </div>
+  </div>
+  </section>
+  
+    </div>
+   
+   

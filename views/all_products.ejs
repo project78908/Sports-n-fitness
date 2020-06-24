@@ -1,0 +1,19 @@
+<%- include ('_layouts/header1') -%>
+<link rel="stylesheet" href="../css/products.css">
+
+<div class="row_products">
+<% products.forEach(function(p){%>
+
+<div class="col-xs-12 col-md-4 p">
+    <h3><%=p.title%></h3>
+
+    <a data-fancybox="gallery" class="pa" href="/products_images/<%=p.id%>/<%=p.image%>">
+        <img class="pimage" src="/products_images/<%=p.id%>/<%=p.image%>" alt="">
+        </a>
+        <h4>NRs.<%=p.price%></h4>
+        <a class="vd" href="/cart/add/<%=p.title%>">Add to cart</a>
+</div>
+<% });%>
+
+
+</div>
