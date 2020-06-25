@@ -215,10 +215,9 @@ top:1%;
       }*/
       .slider{
         
-          width:75%;
+          width:100%;
           top:20px;
           padding: 0 5px;
-      margin-left: 150px;
           height:600px;
           transition:1s;
       }
@@ -228,6 +227,7 @@ top:1%;
       }
       .carousel-item{
       height: 500px;
+      opacity: 0.7;
       -webkit-transition: -webkit-transform 1.2s ease-in-out !important;
           -o-transition: -o-transform 1.2s ease-in-out !important;
           transition: transform 1.2s ease-in-out !important;
@@ -235,7 +235,7 @@ top:1%;
       
      
       
-      .card {
+     /* .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         max-width: 300px;
         margin: auto;
@@ -247,14 +247,14 @@ top:1%;
 margin-top: 5px;
        height:auto;
        width:250px;
-      }
+      }*/
       
       
       .price {
         color: grey;
         font-size: 22px;
       }
-      .card button {
+     /* .card button {
           border: none;
           outline: 0;
           padding: 12px;
@@ -268,14 +268,17 @@ margin-top: 5px;
         
         .card button:hover {
           opacity: 0.7;
-        }
+        }*/
        
         .web-features{
-          margin:60px 0;
-          margin-top: 200px;
+          margin-top: 50px;
           margin-left:50px;
           margin-right: 50px;;
           background-color: #fff;;
+        }
+        .footer{
+          background-color: black;
+
         }
         .web-features img{
           width:20%;
@@ -352,7 +355,7 @@ margin-top: 5px;
           border-left:1px solid #fff;
           padding:15px 35px;
           text-align:center;
-          background-color:forestgreen;
+          background: rgb(30, 11, 49);
           opacity: 0.7;
       
       }
@@ -361,7 +364,8 @@ margin-top: 5px;
           font-size: 35px;
           font-weight: bold;
           color: #fff;
-          width: auto;}
+          width: auto;
+        margin-bottom: 10px;}
 
          
            
@@ -440,3 +444,31 @@ margin-top: 5px;
       .table.alignmiddle.td{
 vertical-align: middle;
       }
+      .containers{
+overflow: hidden;
+padding: 0 0.2rem;
+      }
+    .img{
+      opacity: 0.7;
+    }
+
+   
+     .card{
+       width:500px;
+       opacity: 0.7;
+       margin-left: 30%;
+      grid-template-columns: repeat(2,1fr);
+       grid-gap:2rem;
+       margin-bottom: 2rem;
+     }
+     .card img{
+       height:400px;
+       width:500px
+     }
+     .slogan{
+       opacity: 0.7;
+       margin-top: 1px;
+       margin-bottom: 10px;
+       width:100%
+     }
+    
