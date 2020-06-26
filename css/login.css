@@ -293,4 +293,15 @@ top:1%;
     padding-bottom: 2px;
     margin-left: 5px;
   }
+  .span{
+display: flex;   
+position:absolute; right: 15px;
+    transform: translate(0,-50%);
+    top: 50%;
+    cursor: pointer;
+}
+.fa{
+    font-size: 20px;
+    
+}
  
