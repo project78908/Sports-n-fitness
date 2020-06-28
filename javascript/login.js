@@ -33,7 +33,7 @@ if(email.indexOf('@')<=0) {
  
 }   
 if((email.charAt(email.length-4)!='.')&&(email.charAt(email.length-3)!='.')){
-    document.getElementById('email1').innerHTML="**Email id must be with .com or .in!!**";
+    document.getElementById('email1').innerHTML="**Email id invalid!!**";
     return false; 
  }
 if(number.charAt(0)!=9){
