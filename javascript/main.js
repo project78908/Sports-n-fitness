@@ -25,6 +25,7 @@ CKEDITOR.replace('ta');
         if(!confirm('confirm deletion'))
         return false;
     });
+
     if($("[data-fancybox]").length){
       $("[data-fancybox]").fancybox();
     }
